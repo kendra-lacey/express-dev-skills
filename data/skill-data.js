@@ -1,7 +1,7 @@
 const skills = [
-  {text:'HTML', knowledge: true},
-  {text:'JavaScript', knowledge: true},
-  {text:'CSS', knowledge: true},
+  {text:'HTML', knowledge: false},
+  {text:'JavaScript', knowledge: false},
+  {text:'CSS', knowledge: false},
 ]
 
 export {
