@@ -60,13 +60,15 @@ function deleteSkill(req, res) {
 
 function edit(req, res) {
   Skill.findById(req.params.id)
-  .then(skill =>{
+  .then(skill => {
     //render a view 
-    res.render('skills/edit',{skill:skill})
+    res.render('skills/edit', {
+      skill: skill
+    })
   })
   .catch(error => {
     console.log(error)
-    res.redirect('/todos')
+    res.redirect('/skills')
   })
 }
 

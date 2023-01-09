@@ -14,7 +14,7 @@ router.get('/new', skillsCtrl.new)
 router.get('/:id', skillsCtrl.show)
 
 // GET/SKILLS/:ID/EDIT
-router.post('/id/edit', skillsCtrl.edit)
+router.get('/:id/edit', skillsCtrl.edit)
 
 // POST /SKILLS
 router.post('/', skillsCtrl.create)
