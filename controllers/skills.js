@@ -6,7 +6,8 @@ function index (req, res) {
   .then(skills => {
     // respond by rending a view with skills
     res.render('skills/index', {
-      skills: skills
+      skills: skills,
+      time: req.time
     })
   })
   // handle errors
