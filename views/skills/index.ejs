@@ -14,7 +14,7 @@
     <% skills.forEach(function(skill) { %>
       <li>
         <form 
-        action="/skills/<%= skill._id %>?_methodDELETE"
+        action="/skills/<%= skill._id %>?_method=DELETE"
         class="delete-form"
         method="POST"
         >
