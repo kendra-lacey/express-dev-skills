@@ -1,6 +1,6 @@
 import { Skill } from '../models/skill.js'
 
-function index (req, res) {
+function index(req, res) {
   // use the model to find all skills
   Skill.find({}) // returns a promise -> use .then ..resolves a promise
   .then(skills => {
@@ -11,18 +11,18 @@ function index (req, res) {
     })
   })
   // handle errors
-  .catch (error => {
+  .catch(error => {
     console.log(error)
     res.redirect('/')
   })
 }
 
-function newSkill (req, res) {
+function newSkill(req, res) {
   // render a view with a form
   res.render('skills/new')
 }
 
-function create (req, res) {
+function create(req, res) {
 req.body.knowledge = false
 Skill.create(req.body)
 .then(skill => {
@@ -34,14 +34,14 @@ Skill.create(req.body)
 })
 }
 
-function show (req, res) {
+function show(req, res) {
   Skill.findById(req.params.id) 
   .then(skill => {
     res.render('skills/show', {
     skill: skill
     })
   })
-  .catch (error => {
+  .catch(error => {
     console.log(error)
     res.redirect('/skills')
   })

@@ -9,9 +9,17 @@
 <body>
   <h1>Dev - Skills</h1>
   <h1>Skillz as of <%= time %></h1>
+  <a href="/">Go Back</a>
   <ul>
     <% skills.forEach(function(skill) { %>
       <li>
+        <form 
+        action="/skills/<%= skill._id %>?_methodDELETE"
+        class="delete-form"
+        method="POST"
+        >
+        <button type="submit">𝙓</button>
+        </form>
         <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
           - 
         <%= skill.knowledge ? 'known' : 'unknown' %>

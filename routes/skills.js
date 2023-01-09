@@ -10,11 +10,13 @@ router.get('/', skillsCtrl.index)
 // GET /SKILLS/NEW
 router.get('/new', skillsCtrl.new)
 
-// GET /SKILLS/ID
+// GET /SKILLS/:ID
 router.get('/:id', skillsCtrl.show)
 
 // POST /SKILLS
 router.post('/', skillsCtrl.create)
+
+// DELETE /SKILLS/:ID
 
 export {
   router
