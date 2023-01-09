@@ -13,11 +13,17 @@ router.get('/new', skillsCtrl.new)
 // GET /SKILLS/:ID
 router.get('/:id', skillsCtrl.show)
 
+// GET/SKILLS/:ID/EDIT
+router.post('/id/edit', skillsCtrl.edit)
+
 // POST /SKILLS
 router.post('/', skillsCtrl.create)
 
 // DELETE /SKILLS/:ID
 router.delete('/:id', skillsCtrl.delete)
+
+// PUT/SKILLS/:ID
+router.put('/:id', skillsCtrl.update)
 
 export {
   router
